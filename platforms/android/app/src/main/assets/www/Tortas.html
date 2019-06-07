@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Statusbar overlay -->
+
+        <div class="statusbar"></div>
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="home" class="page">
+
+                <!-- Top Navbar -->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                      <a  href="/index/" class="link">
+                          <img src="./imagenes/LogoHeyCanitoCortado.jpg"width="150" />
+                      </a>
+                    </div>
+                  </div>
+
+                <!-- Toolbar -->
+                <div class="toolbar">
+                    <div class="toolbar-inner">
+                      <!-- Toolbar links -->
+                      <a style="margin: 10px;" class="panel-open" href="#" class="link">Menu</a>
+                      <a style="margin: 10px;" href="/bolsa/" class="link">bolsa</a>
+                      <div class="panel panel-left panel-reveal panel-resizable">
+                        <div class="block">
+                          <p>Left Panel content here</p>
+                          <p><a class="panel-close" href="/Tortas/" data-panel="right">Tortas</a></p>
+                          <p><a class="panel-close" href="/Tortas/" data-panel="right">Empanadas</a></p>
+                          <p><a class="panel-close" href="/Tortas/" data-panel="right">Pan</a></p>
+                          <p><a class="panel-close" href="#">Close me</a></p>
+                        </div>
+                      </div>
+                      <a style="margin: 10px;" href="/login-screen/" class="link">Iniciar Sesion</a>
+                    </div>
+                  </div>
+          
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="list media-list sortable">
+                        <ul>
+                            <li>
+                                <a href="/listaProducto/" class="Tortas">
+                                    <div class="item-content">
+                                        <div class="item-media"><img
+                                                src="./imagenes/tortamilhojas.jpg"
+                                                width="80" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Torta Mil Hojas</div>
+                                                <div class="item-after">$30000</div>
+                                            </div>
+                                            <div class="item-subtitle">Beatles</div>
+                                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit. Nulla sagittis
+                                                tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor
+                                                metus, ultrices condimentum
+                                                sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus.
+                                                Mauris rutrum ligula nec
+                                                dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="sortable-handler"></div>
+                            </li>
+                            <li>
+                                <a href="/listaProducto/" class="Tortas">
+                                    <div class="item-content">
+                                        <div class="item-media"><img
+                                                src="https://cdn.framework7.io/placeholder/people-160x160-1.jpg"
+                                                width="80" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Torta de Chocolate</div>
+                                                <div class="item-after">$25000</div>
+                                            </div>
+                                            <div class="item-subtitle">Beatles</div>
+                                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit. Nulla sagittis
+                                                tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor
+                                                metus, ultrices condimentum
+                                                sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus.
+                                                Mauris rutrum ligula nec
+                                                dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="sortable-handler"></div>
+                            </li>
+                            <li>
+                                <a href="/listaProducto/" class="Tortas">
+                                    <div class="item-content">
+                                        <div class="item-media"><img
+                                                src="https://cdn.framework7.io/placeholder/people-160x160-1.jpg"
+                                                width="80" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Torta 3 sabores</div>
+                                                <div class="item-after">$45000</div>
+                                            </div>
+                                            <div class="item-subtitle">Beatles</div>
+                                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit. Nulla sagittis
+                                                tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor
+                                                metus, ultrices condimentum
+                                                sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus.
+                                                Mauris rutrum ligula nec
+                                                dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="sortable-handler"></div>
+                            </li>
+                            <li>
+                                <a href="/listaProducto/" class="Tortas">
+                                    <div class="item-content">
+                                        <div class="item-media"><img
+                                                src="https://cdn.framework7.io/placeholder/people-160x160-1.jpg"
+                                                width="80" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Torta de manjar</div>
+                                                <div class="item-after">$30000</div>
+                                            </div>
+                                            <div class="item-subtitle">Beatles</div>
+                                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit. Nulla sagittis
+                                                tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor
+                                                metus, ultrices condimentum
+                                                sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus.
+                                                Mauris rutrum ligula nec
+                                                dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="sortable-handler"></div>
+                            </li>
+                            <li>
+                                <a href="/listaProducto/" class="Tortas">
+                                    <div class="item-content">
+                                        <div class="item-media"><img
+                                                src="https://cdn.framework7.io/placeholder/people-160x160-1.jpg"
+                                                width="80" /></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">Yasdasellow Submarine</div>
+                                                <div class="item-after">$15</div>
+                                            </div>
+                                            <div class="item-subtitle">Beatles</div>
+                                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit. Nulla sagittis
+                                                tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor
+                                                metus, ultrices condimentum
+                                                sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus.
+                                                Mauris rutrum ligula nec
+                                                dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="sortable-handler"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <footer>
+                        <p>Posted by: Hege Refsnes</p>
+                        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+                        <div class="footer-copyright text-center py-3">© Todos los derechos reservados:
+                            <br>
+                            <a href="">Alvaro Castillo - Matias Chavez - Contanza Conejeros</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+
+</body>
+
+</html>
