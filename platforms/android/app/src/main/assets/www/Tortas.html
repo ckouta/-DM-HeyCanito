@@ -11,8 +11,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
 
     <!-- Required meta tags-->
     <meta charset="utf-8">
@@ -53,18 +53,18 @@
                 <div class="toolbar">
                     <div class="toolbar-inner">
                       <!-- Toolbar links -->
-                      <a style="margin: 10px;" class="panel-open" href="#" class="link">Menu</a>
-                      <a style="margin: 10px;" href="/bolsa/" class="link">bolsa</a>
+                      <a style="margin: 10px;" class="panel-open" href="#" class="link">Menú</a>
+                      <a style="margin: 10px;" href="/bolsa/" class="link">Bolsa</a>
                       <div class="panel panel-left panel-reveal panel-resizable">
                         <div class="block">
                           <p>Left Panel content here</p>
                           <p><a class="panel-close" href="/Tortas/" data-panel="right">Tortas</a></p>
                           <p><a class="panel-close" href="/Tortas/" data-panel="right">Empanadas</a></p>
                           <p><a class="panel-close" href="/Tortas/" data-panel="right">Pan</a></p>
-                          <p><a class="panel-close" href="#">Close me</a></p>
+                          <p><a class="panel-close" href="#">Cerrar</a></p>
                         </div>
                       </div>
-                      <a style="margin: 10px;" href="/login-screen/" class="link">Iniciar Sesion</a>
+                      <a style="margin: 10px;" href="/login-screen/" class="link">Iniciar Sesión</a>
                     </div>
                   </div>
           
@@ -200,12 +200,12 @@
                             </li>
                         </ul>
                     </div>
-                    <footer>
-                        <p>Posted by: Hege Refsnes</p>
-                        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
-                        <div class="footer-copyright text-center py-3">© Todos los derechos reservados:
+                    <footer style="text-align: center">
+                        <p>Toda la informacion de Panaderia Canito</p>
+                        <p> <b>Contacto:</b> 42-2830097 <br> <b>Correo:</b> panaderiaCanito@gmail.com</a></p>
+                        <div style="text-align: center" class="footer-copyright text-center py-3">© Todos los derechos reservados
                             <br>
-                            <a href="">Alvaro Castillo - Matias Chavez - Contanza Conejeros</a>
+                            <h4>Alvaro Castillo - Matías Chávez - Contanza Conejeros</h4>
                         </div>
                     </footer>
                 </div>
