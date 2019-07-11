@@ -11,7 +11,7 @@
                         <div class="item-inner">
                             <div class="item-title item-label">Nombre Usuario</div>
                             <div class="item-input-wrap">
-                                <input type="text" name="username" placeholder="Usuario">
+                                <input id="user" type="text" name="username" placeholder="Usuario">
                             </div>
                         </div>
                     </li>
@@ -19,7 +19,7 @@
                         <div class="item-inner">
                             <div class="item-title item-label">Contraseña</div>
                             <div class="item-input-wrap">
-                                <input type="password" name="password" placeholder="Contraseña">
+                                <input id="pass" type="password" name="password" placeholder="Contraseña">
                             </div>
                         </div>
                     </li>
@@ -27,7 +27,7 @@
             </div>
             <div class="list">
                 <ul>
-                        <li><a href="#" class="item-link list-button">Iniciar Sesión</a></li>
+                        <li><a id='botonLogin' href="#" class="item-link list-button" onclick="login()">Iniciar Sesión</a></li>
                 </ul>
                 <div class="block-footer">
                     <p>Inicia sesion para que tengas un mejor servicio al realizar tus pedidos con Canito</p>

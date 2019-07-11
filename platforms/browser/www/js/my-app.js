@@ -72,6 +72,29 @@ $$(document).on('page:init', function (e) {
   console.log(e);
 })
 
+function login(){
+  app.request.get('http://localhost:81/login',{user: document.getElementById('user')},function(data){    
+    var valores = JSON.parse(data);
+    var user= null;
+    var pass= null;
+    
+    valores.data.forEach(element => {
+      user = element.user;
+      pass = element.password;  
+    });
+    
+   
+    var inputuser = document.getElementById('user').value;
+    var inputPass = document.getElementById('pass').value;
+
+
+    if(user== inputuser && pass==inputPass){
+     location.href= 'indexLogueado.html';
+    }else{
+      alert('credenciales incorrectas');
+    }
+  });
+}
 // Option 2. Using live 'page:init' event handlers for each page
 $$(document).on('page:init', '.page[data-name="about"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
