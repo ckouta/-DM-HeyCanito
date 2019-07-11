@@ -55,9 +55,20 @@ $$(document).on('deviceready', function () {
   console.log("Device is ready!");
 });
 
+
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
   // Do something here when page loaded and initialized
+  app.request.get('http://localhost:81/productos',{}, function (data) {
+   // var html='<p>'+data.data.nombre+'</p>';
+    var td =[];
+    var valores = JSON.parse(data);
+    valores.data.forEach(element => {
+      td.push('<tr><td>'+element.nombre+'</td><td>'+element.precio+'</td><td>'+element.descripcion+'</td><td>'+element[3]+'</td><td>'+element[4]+'</td><td>'+element[5]+'</td></tr>');
+    });
+    $$('#articles').html(td);
+ 
+});
   console.log(e);
 })
 

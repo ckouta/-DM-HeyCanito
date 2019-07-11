@@ -11,8 +11,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy"
+        content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
 
   <!-- Required meta tags-->
   <meta charset="utf-8">
@@ -87,6 +87,22 @@
                 <img src="./imagenes/baner5.jpg" height="300px">
               </div>
             </div>
+          </div>
+          <div class="data-table card">
+            <table>
+              <thead>
+                <th class="label-cell">nombre</th>
+                <th class="label-cell">precio</th>
+                <th class="label-cell">Descripcion</th>
+                <th class="label-cell">categoria</th>
+                <th class="label-cell">imagen</th>
+                <th class="label-cell">cantidad de personas</th>
+              </thead>
+              <tbody id="articles">
+              
+              </tbody>
+            </table>
+          </div>
           </div>
           <footer style= "text-align: center">
             <p>Toda la informacion de Panaderia Canito</p>
