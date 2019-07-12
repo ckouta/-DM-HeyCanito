@@ -161,7 +161,8 @@ function detalle(id) {
       td.push('          </div>');
       td.push('     </div>');
       td.push('     <div class="col">');
-      td.push('         <button class="col button button-fill color-orange">Carrito ver</button>');
+      td.push('         <button class="col button button-fill color-orange">Carrito</button>');
+
       td.push('     </div>');
       td.push('  </div>');
     });
