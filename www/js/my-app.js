@@ -59,7 +59,7 @@ $$(document).on('deviceready', function () {
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
   // Do something here when page loaded and initialized
-  app.request.get('http://localhost:81/productos',{}, function (data) {
+  app.request.get('http://localhost:3005/productos',{}, function (data) {
    // var html='<p>'+data.data.nombre+'</p>';
     var td =[];
     var valores = JSON.parse(data);
@@ -73,8 +73,9 @@ $$(document).on('page:init', function (e) {
 })
 
 // Option 2. Using live 'page:init' event handlers for each page
-$$(document).on('page:init', '.page[data-name="about"]', function (e) {
-  // Do something here when page with data-name="about" attribute loaded and initialized
+
+$$(document).on('page:Tortas', '.page[data-name="Tortas"]', function (e) {
+  
   console.log(e);
 })
 // Dom Events
@@ -85,14 +86,64 @@ $$('.panel-left').on('panel:opened', function () {
   console.log('Panel left: opened');
 });
 
-// Instance Events
-var panelRight = app.panel.right;
-panelRight.on('open', function () {
-  console.log('Panel right: open');
-});
-panelRight.on('opened', function () {
-  console.log('Panel right: opened');
-});
+function myFunction(id) {
+  var td =[];
+  app.request.get('http://localhost:3005/producto/categoria/'+id,{}, function (data) {
+    console.log("paso aqui");
+    var valores = JSON.parse(data);
+    valores.data.forEach(element => {
+      td.push('<li >');
+      td.push('<a href="/listaProducto/" onclick="detalle('+element.id+')" class="Tortas">');
+      td.push('<div class="item-content">');
+      td.push('<div class="item-media"><img width="80" src="'+element.imagen+'"/> </div>');
+      td.push('<div class="item-inner">');
+      td.push('<div class="item-title-row">');
+      td.push('<div class="item-title">'+element.nombre+'</div>');
+      td.push('<div class="item-after">'+element.precio+'</div>');
+      td.push('</div>');
+      td.push('<div class="item-subtitle"> cantidad de personas: '+element.cantidad_personas+'</div>');
+      td.push('<div class="item-text">'+element.descripcion+'</div>');
+      td.push('</div>');
+      td.push('</div>');
+      td.push('</a>');
+      td.push('<div class="sortable-handler"></div>');
+      td.push('</li>');
+    });
+    console.log(td.join(''));
+   $$('#list').html(td.join(''));
+  });
+}
+function detalle(id) {
+  var td =[];
+  app.request.get('http://localhost:3005/producto/'+id,{}, function (data) {
+    console.log("paso aqui");
+    var valores = JSON.parse(data);
+    valores.data.forEach(element => {
+      td.push('<h1>'+element.nombre+'</h1>');
+      td.push(' <div class="item-media">');
+      td.push('      <img src="'+element.imagen+'" width="100%" />');
+      td.push(' </div>');
+      td.push(' <p>Descripcion: '+element.descripcion+'</p>');
+      td.push(' <p>Precio: '+element.precio+'</p>');
+      td.push(' <div class="row">');
+      td.push('      <div class="col">');
+      td.push('         <div class="stepper stepper-fill stepper-round stepper-init">');
+      td.push('             <div class="stepper-button-minus"></div>');
+      td.push('             <div class="stepper-input-wrap">');
+      td.push('                <input type="text" value="0" min="0" max="100" step="1" readonly>');
+      td.push('            </div>');
+      td.push('             <div class="stepper-button-plus"></div>');
+      td.push('          </div>');
+      td.push('     </div>');
+      td.push('     <div class="col">');
+      td.push('         <button class="button col">Carrito</button>');
+      td.push('     </div>');
+      td.push('  </div>');
+    });
+    console.log(td.join(''));
+   $$('#detalle').html(td.join(''));
+  });
+}
 
 // App Events
 app.on('panelClose', function (panel) {
