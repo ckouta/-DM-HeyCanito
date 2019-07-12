@@ -72,8 +72,16 @@ $$(document).on('page:init', function (e) {
   console.log(e);
 })
 
-function login(){
+function login2(){
+  var inputuser = document.getElementById('user').value;
+  var inputPass = document.getElementById('pass').value;
+  console.log('in'+inputuser);
+  console.log('in'+inputPass);
+  console.log('para'+name);
+  
+
   app.request.get('http://localhost:81/login',{user: document.getElementById('user')},function(data){    
+    console.log('entro a query');
     var valores = JSON.parse(data);
     var user= null;
     var pass= null;
@@ -82,11 +90,9 @@ function login(){
       user = element.user;
       pass = element.password;  
     });
-    
-   
-    var inputuser = document.getElementById('user').value;
-    var inputPass = document.getElementById('pass').value;
 
+console.log('usuario'+user);
+console.log('pass'+pass);
 
     if(user== inputuser && pass==inputPass){
      location.href= 'indexLogueado.html';
