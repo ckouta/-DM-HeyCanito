@@ -11,8 +11,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy"
-        content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
 
   <!-- Required meta tags-->
   <meta charset="utf-8">
@@ -43,8 +43,8 @@
         <!-- Top Navbar -->
         <div class="navbar" style="background: white">
           <div class="navbar-inner">
-            <a  href="/index/" class="link" >
-                <img src="./imagenes/LogoHeyCanitoCortado.jpg"width="150" />
+            <a href="/index/" class="link">
+              <img src="./imagenes/LogoHeyCanitoCortado.jpg" width="150" />
             </a>
           </div>
         </div>
@@ -58,9 +58,12 @@
             <div class="panel panel-left panel-reveal panel-resizable">
               <div class="block">
                 <p>Panel Menú</p>
-                <p><a class="panel-close" href="/Tortas/" data-panel="right" onclick="myFunction('Tortas')">Pastelería</a></p>
-                <p><a class="panel-close" href="/Tortas/" data-panel="right" onclick="myFunction('Panaderia')">Panadería</a></p>
-                <p><a class="panel-close" href="/Tortas/" data-panel="right" onclick="myFunction('Empanadas')">Empanadas</a></p>
+                <p><a class="panel-close" href="/Tortas/" data-panel="right"
+                    onclick="myFunction('Tortas')">Pastelería</a></p>
+                <p><a class="panel-close" href="/Tortas/" data-panel="right"
+                    onclick="myFunction('Panaderia')">Panadería</a></p>
+                <p><a class="panel-close" href="/Tortas/" data-panel="right"
+                    onclick="myFunction('Empanadas')">Empanadas</a></p>
                 <p><a class="panel-close" href="#">Cerrar</a></p>
               </div>
             </div>
@@ -73,12 +76,12 @@
           <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="200"
             class="swiper-container swiper-init demo-swiper">
             <div class="swiper-pagination"></div>
-            <div  class="swiper-wrapper">
+            <div class="swiper-wrapper">
               <div class="swiper-slide">
-                  <img src="./imagenes/bannerweb8.jpg" height="100%" width="100%" />
+                <img src="./imagenes/bannerweb8.jpg" height="100%" width="100%" />
               </div>
               <div class="swiper-slide">
-                  <img src="./imagenes/baner3.jpg" height="300px">
+                <img src="./imagenes/baner3.jpg" height="300px">
               </div>
               <div class="swiper-slide">
                 <img src="./imagenes/galletas.jpg" height="300px">
@@ -88,34 +91,22 @@
               </div>
             </div>
           </div>
-          <div class="data-table card">
-            <table>
-              <thead>
-                <th class="label-cell">nombre</th>
-                <th class="label-cell">precio</th>
-                <th class="label-cell">Descripcion</th>
-                <th class="label-cell">categoria</th>
-                <th class="label-cell">imagen</th>
-                <th class="label-cell">cantidad de personas</th>
-              </thead>
-              <tbody id="articles">
-              
-              </tbody>
-            </table>
-          </div>
-          </div>
-          <footer style= "text-align: center">
-            <p>Toda la informacion de Panaderia Canito</p>
-            <p > <b>Contacto:</b> 42-2830097 <br> <b>Correo:</b> panaderiaCanito@gmail.com</a></p>
+
+          <footer style="text-align: center">
+            <p>Toda la información de Panaderia Canito</p>
+            <p> <b>Contacto:</b> 42-2830097 <br> <b>Correo:</b> panaderiaCanito@gmail.com</a></p>
             <div style="text-align: center" class="footer-copyright text-center py-3">© Todos los derechos reservados
-              <br>
               <h4>Alvaro Castillo - Matías Chávez - Contanza Conejeros</h4>
             </div>
           </footer>
         </div>
+
+
+        
+
       </div>
     </div>
-
+    </div>
   </div>
 
   <script type="text/javascript" src="cordova.js"></script>
