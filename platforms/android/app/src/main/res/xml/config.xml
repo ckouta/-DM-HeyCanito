@@ -3,7 +3,7 @@
     <feature name="Battery">
         <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
     </feature>
-    <name>heyCanito</name>
+    <name>HeyCanito</name>
     <description>
         A basic Framework7 template for PhoneGap.
     </description>
