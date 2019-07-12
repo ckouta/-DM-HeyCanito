@@ -156,17 +156,8 @@ function detalle(id) {
       td.push(' <p><b>Código del producto:</b> 3245653 </p>');
       td.push(' <p><b>Precio:</b> '+element.precio+'</p>');
       td.push(' <div class="row">');
-      td.push('      <div class="col">');
-      td.push('         <div class="stepper stepper-large stepper-fill stepper-round stepper-init color-orange">');
-      td.push('             <div class="stepper-button-minus no-ripple"></div>');
-      td.push('               <div class="stepper-input-wrap">');
-      td.push('                 <input type="text" value="0" min="0" max="100" step="1" readonly>');
-      td.push('               </div>');
-      td.push('             <div class="stepper-button-plus no-ripple"></div>');
-      td.push('          </div>');
-      td.push('     </div>');
       td.push('     <div class="col">');
-      td.push('         <button class="col button button-fill color-orange no-ripple">Carrito</button>');
+      td.push('         <button class="col button button-fill color-orange no-ripple">Añadir al carrito</button>');
       td.push('     </div>');
       td.push('  </div>');
     });
