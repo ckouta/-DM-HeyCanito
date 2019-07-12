@@ -55,12 +55,52 @@ $$(document).on('deviceready', function () {
   console.log("Device is ready!");
 });
 
+
 // Option 1. Using one 'page:init' handler for all pages
 $$(document).on('page:init', function (e) {
   // Do something here when page loaded and initialized
+  app.request.get('http://localhost:81/productos',{}, function (data) {
+   // var html='<p>'+data.data.nombre+'</p>';
+    var td =[];
+    var valores = JSON.parse(data);
+    valores.data.forEach(element => {
+      td.push('<tr><td>'+element.nombre+'</td><td>'+element.precio+'</td><td>'+element.descripcion+'</td><td>'+element[3]+'</td><td>'+element[4]+'</td><td>'+element[5]+'</td></tr>');
+    });
+    $$('#articles').html(td);
+ 
+});
   console.log(e);
 })
 
+function login2(){
+  var inputuser = document.getElementById('user').value;
+  var inputPass = document.getElementById('pass').value;
+  console.log('in'+inputuser);
+  console.log('in'+inputPass);
+  console.log('para'+name);
+  
+
+  app.request.get('http://localhost:81/login',{user: document.getElementById('user')},function(data){    
+    console.log('entro a query');
+    var valores = JSON.parse(data);
+    var user= null;
+    var pass= null;
+    
+    valores.data.forEach(element => {
+      user = element.user;
+      pass = element.password;  
+    });
+
+console.log('usuario'+user);
+console.log('pass'+pass);
+
+    if(user== inputuser && pass==inputPass){
+     location.href= 'indexLogueado.html';
+    }else{
+      alert('credenciales incorrectas');
+    }
+  });
+}
 // Option 2. Using live 'page:init' event handlers for each page
 $$(document).on('page:init', '.page[data-name="about"]', function (e) {
   // Do something here when page with data-name="about" attribute loaded and initialized
