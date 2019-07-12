@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "heyCanito",
-  "short_name": "heyCanito",
+  "name": "HeyCanito",
+  "short_name": "HeyCanito",
   "version": "com.hey.canito",
   "description": "A basic Framework7 template for PhoneGap.",
   "author": "Apache Cordova Team",
